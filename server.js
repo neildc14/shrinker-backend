@@ -14,7 +14,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
 //routes
-app.use("/sh", shortenLinks);
+app.use(shortenLinks);
 
 mongoose.set("strictQuery", true);
 mongoose.connect(process.env.MONGODB_URI, {
